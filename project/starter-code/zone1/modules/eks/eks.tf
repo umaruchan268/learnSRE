@@ -22,7 +22,7 @@ resource "aws_security_group" "eks-cluster" {
 }
 resource "aws_eks_cluster" "cluster" {
    name     = "${var.name}-cluster"
-   version  = "1.21"
+   version  = "1.25"
    role_arn = aws_iam_role.eks_cluster_role.arn
 
    vpc_config {
@@ -46,9 +46,9 @@ resource "aws_eks_cluster" "cluster" {
    instance_types  = [var.instance_type]
 
    scaling_config {
-     desired_size = var.nodes_desired_size
-     max_size     = var.nodes_max_size
-     min_size     = var.nodes_min_size
+     desired_size = 2
+     max_size     = 3
+     min_size     = 2
    }
 
    # Ensure that IAM Role permissions are created before and deleted after EKS Node Group handling.

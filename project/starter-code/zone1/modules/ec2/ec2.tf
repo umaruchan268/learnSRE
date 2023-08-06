@@ -5,7 +5,7 @@ resource "aws_instance" "ubuntu" {
   key_name = "udacity"
   subnet_id = var.public_subnet_ids[0]
   vpc_security_group_ids = [aws_security_group.ec2_sg.id]
-
+  user_data = file("./user-data-node-exporter.sh")
   tags = {
     Name = "Ubuntu-Web"
   }
