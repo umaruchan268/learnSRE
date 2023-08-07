@@ -3,7 +3,7 @@ terraform {
      bucket = "uyen260801"
      key    = "terraform/terraform.tfstate"
      region = "us-east-2"
-    shared_credentials_file = "$HOME/.aws/credentials
+    shared_credentials_file = "$HOME/.aws/credentials"
    }
  }
 
