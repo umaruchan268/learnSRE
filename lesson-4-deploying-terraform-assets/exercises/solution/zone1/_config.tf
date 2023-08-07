@@ -1,6 +1,6 @@
 terraform {
    backend "s3" {
-     bucket = "udacity-tf-tscotto"
+     bucket = "uyen260801"
      key    = "terraform/terraform.tfstate"
      region = "us-east-2"
     access_key = "AKIA542XT4NUDQKUL2ME"
